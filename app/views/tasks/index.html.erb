@@ -9,7 +9,7 @@
         <%= link_to_done(task) %>
         <div class="tasks-item-links">
           <%= link_to('Edit', {controller: 'tasks', action: 'edit', id: task.id}, {class: 'tasks-item-edit'}) %>
-          <%= link_to('Delete', {controller: 'tasks', action: 'destroy', id: task.id}, {class: 'tasks-item-delete'}) %>
+          <%= link_to('Delete', {controller: 'tasks', action: 'delete', id: task.id}, {class: 'tasks-item-delete'}) %>
         </div>
       </div>
     <% end %>

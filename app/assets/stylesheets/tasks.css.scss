@@ -29,6 +29,11 @@
       &:nth-child(even) {
         margin-right: 0;
       }
+
+      &:first-child:last-child {
+        float: none;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -108,5 +113,12 @@
         transition: all 0.3s;
       }
     }
+  }
+
+  &-deletion-btns {
+    width: 48%;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
   }
 }

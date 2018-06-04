@@ -50,7 +50,6 @@ class TasksController < ApplicationController
 
   # GET /tasks/done/1
   def done
-    puts params
     @task = Task.find(params[:id])
 
     respond_to do |format|
@@ -60,14 +59,19 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
+  # GET /tasks/delete/1
+  def delete
+    @task = Task.find(params[:id])
+  end
+
+  # GET /tasks/destroy/1
+  # GET /tasks/destroy/1.json
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url }
+      format.html { redirect_to action: 'index' }
       format.json { head :no_content }
     end
   end
