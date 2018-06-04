@@ -1,0 +1,17 @@
+<div class="tasks">
+  <h1 class="tasks-header">Listing tasks</h1>
+
+  <%= render 'form' %>
+
+  <div class="tasks-list">
+    <% @tasks.each do |task| %>
+      <div class="tasks-list-item">
+        <%= link_to_done(task) %>
+        <div class="tasks-item-links">
+          <%= link_to('Edit', {controller: 'tasks', action: 'edit', id: task.id}, {class: 'tasks-item-edit'}) %>
+          <%= link_to('Delete', {controller: 'tasks', action: 'destroy', id: task.id}, {class: 'tasks-item-delete'}) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
