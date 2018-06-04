@@ -1,0 +1,14 @@
+<div class="tasks">
+  <h1 class="tasks-header">Confirm deletion of task</h1>
+
+  <div class="tasks-list">
+    <div class="tasks-list-item">
+      <div class="<%= task_block_class(@task) %>"><%= @task.text %></div>
+    </div>
+  </div>
+
+  <div class="tasks-deletion-btns">
+    <%= link_to('Back', controller: 'tasks', action: 'index') %>
+    <%= link_to('Delete', {controller: 'tasks', action: 'destroy', id: @task.id}) %>
+  </div>
+</div>
